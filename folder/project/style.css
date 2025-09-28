@@ -32,6 +32,9 @@ table,th,td{
 	background-color:#a157;
 	text-align:center;
 	border:10px ;
+	max-width:100%;
+	width:100%;
+	font-size:3vw;
 	
 }
 .tabl{
