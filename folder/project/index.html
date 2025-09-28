@@ -19,7 +19,7 @@
 
 	<main>
 		<h2>Table</h2>
-		<table>
+		<table >
       <tr>
         <th>Номер <br>команды</th>
         <th>Имя</th>
@@ -78,7 +78,7 @@
     </table>
 		<h2>Список ссылок</h2>
 		<ul>
-			<li> <a href="https://www.kubsu.ru/index.php">ссылка на главную страницу (1)</a></li>
+			<li> <a href="https://www.kubsu.ru/index.html">ссылка на главную страницу (1)</a></li>
 			<li> <a href="https://www.kubsu.ru">ссылка на главную страницу (2)</a></li>
 			<li> <img src="https://avatars.mds.yandex.net/i?id=4480f1b6dc39779541ed076e04586d0042e0da02-12369942-images-thumbs&n=13" width="150" heigth="90"></li>
 			<li> <a href="form.html">ссылка на внут стр сайта (4)</a></li>
@@ -131,7 +131,8 @@
 
 		
 	<h2>Форма</h2>
-	<form action="/"
+	
+	<div class="forma"><form  action="/"
       method="POST">
 	<label>ФИО:<br /> <input name="field-name-1" /></label><br />	
 	<label>Телефон:<br /><input type="tel" />	</label><br />
@@ -139,7 +140,7 @@
 	<label>Дата рождения:<br /> <input type="date" /></label><br />	Пол:
 	<label><input type="radio" checked="checked"  name="radio-group-1" value="Значение1" />мужской </label>
 	<label><input type="radio" name="radio-group-1" value="Значение2" />женский</label><br />
-	<label>любимый язык программирования:<br />
+	<label>Любимый язык программирования:<br />
 		<select name="field-name-4[]" multiple="multiple">
 		<option value="Значение1" >Pascal</option>
 		<option value="Значение2" selected="selected">C</option>
@@ -159,7 +160,7 @@
       </label><br />
 	Чекбокс:<br />
       <label><input type="checkbox" name="check-1" />с контрактом ознакомлен (а)</label><br />
-	<input type="submit" value="сохранить" /> </form>
+	<input type="submit" value="сохранить" /> </form></div>
 	</main>
 	
 	<footer><h2>@Шилин Александр</h2></footer>
