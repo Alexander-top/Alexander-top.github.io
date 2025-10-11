@@ -1,0 +1,106 @@
+
+
+import './App.css'
+import TableOf from './Table';
+function App() {
+ 
+
+  return (
+    <>
+     	<header>
+		<div id="r">
+		<img /*class="logoW"*/ src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/640px-AMD_Logo.svg.png" width="150" height="80" /> <br/><br/>
+		<h1>Project</h1>
+		</div>
+		
+	</header>
+	<nav>
+		<a /*class="navi"*/ href="">First</a> | <a /*class="navi"*/ href="">Second</a> | <a /*class="navi"*/ href="">Third</a>
+	</nav>
+
+	<main>
+		<h2>Table</h2>
+		<TableOf />
+
+		<h2>Список ссылок</h2>
+		<ul>
+			<li> <a href="https://www.kubsu.ru/index.html">ссылка на главную страницу (1)</a></li>
+			<li> <a href="https://www.kubsu.ru">ссылка на главную страницу (2)</a></li>
+			<li> <img src="https://avatars.mds.yandex.net/i?id=4480f1b6dc39779541ed076e04586d0042e0da02-12369942-images-thumbs&n=13" width="150" height="90" /></li>
+			<li> <a href="form.html">ссылка на внут стр сайта (4)</a></li>
+			<li> <a href="index.html">ССЫЛКА НА ГЛАВН СТР(5)</a></li>
+			<li> <a href="#tt"> ссылка на фрагмент (6)</a></li>
+			<li> <a href="https://www.youtube.com" target="_blank" title="prog" >  ссылкa с тремя параметрами в URL(7)</a></li>
+			<li> <a href="https://www.example.com/index.html?id=789">ccылка на сайт с ид(8)</a></li>
+			<li> <a href="./r.html"> относительная на страницу в текущем каталоге (9)</a></li>
+			<li> <a href="../../about/u_10.html"> относительная на страницу в каталоге about(10)</a></li>
+			<li> <a href="../../y.html">относительная на страницу в каталоге уровнем выше текущего(11)</a></li>
+			<li> <a href="">(12)  относительная на страницу в каталоге двумя уровнями выше</a></li>
+			<li> (13) <br/>
+				Ох, <a href="https://www.culture.ru/materials/258810/test-prodolzhite-stikhotvoreniya-o-lete">лето</a> красное! любил бы я тебя, <br/>
+				Когда б не зной, да пыль, да комары, да мухи. <br/>
+				Ты, все душевные способности губя, <br/>
+				Нас мучишь; как поля, мы страждем от засухи; <br/>
+				Лишь как бы напоить да освежить себя — <br/>
+				Иной в нас мысли нет, и жаль зимы старухи, <br/>
+				И, проводив ее блинами и вином, <br/>
+				</li>
+			<li> <a href="https://es.wikipedia.org/wiki/Wikipedia:Wikipedistas#n-mainpage-description"> ссылка на фрагмент страницы стороннего сайта(14)</a></li>
+			<li>(15)<br/>
+				<img src="img.jpg" alt="" /*usemap="#Map"*/ />
+              
+				</li>
+			<li> <a href="">пустая ссылка (16)</a></li>
+			<li> <a>ссылка без href (17)</a></li>
+			<li> <a href="https://google.com" rel="nofollow"> ссылка, по которой запрещен переход поисковикам(18)</a></li>
+			<li><noindex> <a href="https://google.com">запрещенная для индексации поисковиками(19)</a></noindex></li>
+			<li> <ol>
+				<li><a href="https://img.com" title="круг">круг</a></li>
+				<li><a href="https://img.com" title="квадрат">квадрат</a></li>
+				<li><a href="https://img.com" title="овал">овал</a></li>
+				</ol></li>
+		</ul>
+			<li><a href="ftp://user:passqwertyuyi@ftp.company.com/rep/rep2000.doc">скачать документ (21)</a></li> <br/><br/>
+	
+
+
+		
+	<h2>Форма</h2>
+	
+	<div /*class="forma"*/><form  action="/"
+      method="POST">
+	<label>ФИО:<br /> <input name="field-name-1" /></label><br />	
+	<label>Телефон:<br /><input type="tel" />	</label><br />
+	<label>Email:<br /><input name="field-email" type="email" placeholder="Введите вашу почту" /> </label><br />
+	<label>Дата рождения:<br /> <input type="date" /></label><br />	Пол:
+	<label><input type="radio" /*checked="checked"*/  name="radio-group-1" value="Значение1" />мужской </label>
+	<label><input type="radio" name="radio-group-1" value="Значение2" />женский</label><br />
+	<label>Любимый язык программирования:<br />
+		<select name="field-name-4[]" /*multiple="multiple"*/>
+		<option value="Значение1" >Pascal</option>
+		<option value="Значение2" /*selected="selected"*/>C</option>
+		<option value="Значение3" /*selected="selected"*/>C++</option>
+		<option value="Значение4" /*selected="selected"*/>JavaScript</option>
+		<option value="Значение5" /*selected="selected"*/>html</option>
+		<option value="Значение6" /*selected="selected"*/>Python</option>
+		<option value="Значение7" /*selected="selected"*/>Java</option>
+		<option value="Значение8" /*selected="selected"*/>Haskel</option>
+		<option value="Значение9" /*selected="selected"*/>Clojure</option>
+		<option value="Значение10" /*selected="selected"*/>Prolog</option>
+		<option value="Значение11" /*selected="selected"*/>Scala</option> </select>
+		</label><br />	
+	<label>
+        Биография:<br />
+        <textarea name="field-name-2">начало</textarea>
+      </label><br />
+	Чекбокс:<br />
+      <label><input type="checkbox" name="check-1" />с контрактом ознакомлен (а)</label><br />
+	<input type="submit" value="сохранить" /> </form></div>
+	</main>
+	
+	<footer><h2>@Шилин Александр</h2></footer>
+    </>
+  )
+}
+
+export default App
