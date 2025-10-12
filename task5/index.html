@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости заказа</title>
+    <script defer src="calculator.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Калькулятор стоимости заказа</h1>
+        
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="product">Выберите товар:</label>
+                <select class="inp" id="product" name="product" required>
+                    <option value="" disabled selected>-- Выберите товар --</option>
+                    <optgroup label="Основные строительные материалы">
+        <option value="50">Цемент - 50 руб./мешок (50 кг)</option>
+        <option value="35">Песок строительный - 35 руб./тонна</option>
+        <option value="25">Щебень гранитный - 25 руб./тонна</option>
+        <option value="15">Кирпич строительный - 15 руб./шт</option>
+        <option value="180">Блок газобетонный - 180 руб./шт</option>
+        <option value="95">Блок керамический - 95 руб./шт</option>
+        <option value="28">Шпаклевка стартовая - 28 руб./мешок (25 кг)</option>
+        <option value="32">Шпаклевка финишная - 32 руб./мешок (25 кг)</option>
+        <option value="45">Штукатурка гипсовая - 45 руб./мешок (30 кг)</option>
+        <option value="38">Штукатурка цементная - 38 руб./мешок (25 кг)</option>
+    </optgroup>
+    <optgroup label="Пиломатериалы">
+        <option value="5">Доска обрезная - 5 руб./шт</option>
+        <option value="8">Брус деревянный - 8 руб./шт</option>
+        <option value="12">Брус клееный - 12 руб./шт</option>
+        <option value="320">Фанера - 320 руб./лист</option>
+        <option value="280">OSB плита - 280 руб./лист</option>
+        <option value="190">ДВП - 190 руб./лист</option>
+        <option value="420">МДФ панель - 420 руб./лист</option>
+        <option value="15">Рейка деревянная - 15 руб./шт</option>
+        <option value="25">Вагонка деревянная - 25 руб./шт</option>
+    </optgroup>
+    
+    <optgroup label="Отделочные материалы">
+        <option value="120">Плитка керамическая - 120 руб./м²</option>
+        <option value="85">Обои - 85 руб./рулон</option>
+        <option value="45">Краска водоэмульсионная - 45 руб./банка (3 л)</option>
+        <option value="65">Краска масляная - 65 руб./банка (3 л)</option>
+        <option value="320">Ламинат - 320 руб./м²</option>
+        <option value="480">Паркетная доска - 480 руб./м²</option>
+        <option value="95">Линолеум - 95 руб./м²</option>
+        <option value="28">Плинтус напольный - 28 руб./шт</option>
+        <option value="18">Плинтус потолочный - 18 руб./шт</option>
+        <option value="75">Уголок декоративный - 75 руб./шт</option>
+        <option value="120">Панели ПВХ - 120 руб./м²</option>
+        <option value="180">Гипсокартон - 180 руб./лист</option>
+    </optgroup>
+    
+    <optgroup label="Крепежные элементы">
+        <option value="3">Гвоздь строительный - 3 руб./упаковка (1 кг)</option>
+        <option value="12">Саморез по дереву - 12 руб./упаковка (100 шт)</option>
+        <option value="15">Саморез по металлу - 15 руб./упаковка (100 шт)</option>
+        <option value="8">Дюбель-гвоздь - 8 руб./упаковка (50 шт)</option>
+        <option value="25">Анкерный болт - 25 руб./шт</option>
+        <option value="5">Шуруп - 5 руб./упаковка (50 шт)</option>
+        <option value="45">Хомут монтажный - 45 руб./упаковка (20 шт)</option>
+        <option value="28">Перфолента - 28 руб./рулон</option>
+        <option value="95">Уголок монтажный - 95 руб./упаковка (10 шт)</option>
+    </optgroup>
+    
+    <optgroup label="Изоляционные материалы">
+        <option value="85">Пенопласт - 85 руб./лист</option>
+        <option value="120">Минеральная вата - 120 руб./упаковка</option>
+        <option value="95">Пенополистирол - 95 руб./лист</option>
+        <option value="65">Пенофол - 65 руб./рулон</option>
+        <option value="45">Паробарьер - 45 руб./рулон</option>
+        <option value="38">Гидроизоляция - 38 руб./рулон</option>
+        <option value="25">Рубероид - 25 руб./рулон</option>
+        <option value="180">Теплоизоляционная краска - 180 руб./банка</option>
+    </optgroup>
+    
+    <optgroup label="Окна и двери">
+        <option value="4500">Дверь межкомнатная - 4500 руб./шт</option>
+        <option value="6800">Дверь входная - 6800 руб./шт</option>
+        <option value="3200">Окно пластиковое - 3200 руб./шт</option>
+        <option value="4200">Окно деревянное - 4200 руб./шт</option>
+        <option value="85">Ручка дверная - 85 руб./шт</option>
+        <option value="45">Петля дверная - 45 руб./шт</option>
+        <option value="28">Замок навесной - 28 руб./шт</option>
+        <option value="120">Замок врезной - 120 руб./шт</option>
+    </optgroup>
+    
+    <optgroup label="Сантехника">
+        <option value="2800">Унитаз - 2800 руб./шт</option>
+        <option value="4200">Ванна акриловая - 4200 руб./шт</option>
+        <option value="3200">Раковина - 3200 руб./шт</option>
+        <option value="85">Кран шаровой - 85 руб./шт</option>
+        <option value="45">Фитинг пластиковый - 45 руб./шт</option>
+        <option value="28">Труба полипропиленовая - 28 руб./метр</option>
+        <option value="35">Труба металлопластиковая - 35 руб./метр</option>
+        <option value="25">Шланг гибкий - 25 руб./шт</option>
+        <option value="15">Муфта соединительная - 15 руб./шт</option>
+    </optgroup>
+    
+    <optgroup label="Электротехника">
+        <option value="45">Кабель электрический - 45 руб./метр</option>
+        <option value="28">Провод монтажный - 28 руб./метр</option>
+        <option value="15">Розетка электрическая - 15 руб./шт</option>
+        <option value="18">Выключатель - 18 руб./шт</option>
+        <option value="85">Автомат защитный - 85 руб./шт</option>
+        <option value="120">Светильник - 120 руб./шт</option>
+        <option value="65">Люстра - 65 руб./шт</option>
+        <option value="25">Лампа светодиодная - 25 руб./шт</option>
+        <option value="35">Распределительная коробка - 35 руб./шт</option>
+    </optgroup>
+    
+    <optgroup label="Инструменты">
+        <option value="850">Молоток - 850 руб./шт</option>
+        <option value="650">Отвертка набор - 650 руб./набор</option>
+        <option value="1200">Дрель электрическая - 1200 руб./шт</option>
+        <option value="2800">Перфоратор - 2800 руб./шт</option>
+        <option value="950">Шуруповерт - 950 руб./шт</option>
+        <option value="450">Уровень строительный - 450 руб./шт</option>
+        <option value="280">Рулетка измерительная - 280 руб./шт</option>
+        <option value="180">Ножницы по металлу - 180 руб./шт</option>
+        <option value="320">Плоскогубцы - 320 руб./шт</option>
+    </optgroup>
+    
+    <optgroup label="Прочие материалы">
+        <option value="85">Сетка штукатурная - 85 руб./рулон</option>
+        <option value="45">Стекловолокно - 45 руб./рулон</option>
+        <option value="28">Лента монтажная - 28 руб./рулон</option>
+        <option value="15">Герметик силиконовый - 15 руб./тюбик</option>
+        <option value="25">Клей для плитки - 25 руб./мешок (25 кг)</option>
+        <option value="18">Клей для обоев - 18 руб./упаковка</option>
+        <option value="35">Грунтовка глубокого проникновения - 35 руб./литр</option>
+        <option value="42">Растворитель - 42 руб./литр</option>
+        <option value="28">Ацетон - 28 руб./литр</option>
+    </optgroup>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantity">Количество:</label>
+                <input type="text" id="quantity" name="quantity" placeholder="Введите количество" required>
+                <div id="quantityError" class="error-message" style="display: none;"></div>
+            </div>
+            
+            <button type="button" id="calculateBtn">Рассчитать стоимость</button>
+        </form>
+        
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+</body>
+</html>
