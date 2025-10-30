@@ -1,0 +1,16 @@
+img {
+    width: 30vw;
+    height: 30vw;
+}
+
+.ant-carousel .slick-prev, .ant-carousel .slick-next {
+    background: rgb(27, 6, 6);
+    height: 20vw;
+    width: 10vw;
+}
+
+@media (width > 768px){
+    .ant-carousel .slick-prev, .ant-carousel .slick-next {
+        width: 5vw;
+    }
+}
