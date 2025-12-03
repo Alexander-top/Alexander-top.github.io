@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Форма обратной связи</h1>
+            <p class="subtitle">Свяжитесь с нами, мы ответим в ближайшее время</p>
+        </header>
+
+        <button class="open-form-btn" id="openFormBtn">
+            <i class="fas fa-envelope"></i> Открыть форму обратной связи
+        </button>
+    </div>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Форма обратной связи</h2>
+                <button class="close-btn" id="closePopupBtn">&times;</button>
+            </div>
+
+            <div class="form-container">
+                <form id="feedbackForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">ФИО <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Введите ваше полное имя">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Организация</label>
+                            <input type="text" id="organization" name="organization" placeholder="Название вашей организации">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Сообщение <span class="required">*</span></label>
+                        <textarea id="message" name="message" required placeholder="Введите ваше сообщение..."></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                        <label for="privacyPolicy">
+                            Я согласен с <a href="#" class="privacy-link" id="privacyLink">политикой обработки персональных данных</a> <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Отправить сообщение
+                    </button>
+                </form>
+
+                <div class="message success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.
+                </div>
+
+               
+                <div class="message error-message" id="errorMessage">
+                    <i class="fas fa-exclamation-circle"></i> Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
